@@ -2646,12 +2646,10 @@ UILibrary.MakeModule{
 
 local teleportConnection = player.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-		local stringtp = [[
+		local stringtp =
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnaIytics/AstralV2/Astral.lua", true))() 
             end
-        ]]
 		queueteleport(stringtp)
-    end
 end)
 
 Notifications.Notify("Astral", "loaded in " .. tick() - executiontime .. " seconds.", 5, getgenv().HUDColor)
